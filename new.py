@@ -66,10 +66,10 @@ import os
 # Join :- @DX4_CHEATS #from keep_alive import keep_alive
 # Join :- @DX4_CHEATS #keep_alive()
 # Join :- @DX4_CHEATS # insert your Telegram bot token here
-bot = telebot.TeleBot('7141965785:AAFRsCyY6y_iW4r_GMxkXdRclUGBVRF0fYc')
+bot = telebot.TeleBot('6557112168:AAG2UD6KgIg3nXpZa2OW6YlQJoXvYTc0254')
 
 # Join :- @DX4_CHEATS # Admin user IDs
-admin_id = ["1470983554","1908095816","1537783826"]
+admin_id = ["6161481092"]
 
 # Join :- @DX4_CHEATS # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -486,8 +486,8 @@ def handle_bgmi(message):
         # Join :- @DX4_CHEATS # Check if the user is in admin_id (admins have no cooldown)
         if user_id not in admin_id:
             # Join :- @DX4_CHEATS # Check if the user has run the command before and is still within the cooldown period
-            if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds < 120:
-                response = "You Are On Cooldown . Please Wait 2min Before Running The /bgmi Command Again."
+            if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds < 0:
+                response = "You Are On Cooldown . Please Wait 0sec Before Running The /bgmi Command Again."
                 bot.reply_to(message, response)
                 return
             # Join :- @DX4_CHEATS # Update the last time the user ran the command
